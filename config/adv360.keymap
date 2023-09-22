@@ -80,7 +80,7 @@
 
     // Home row mods 
     #define _A_CTL &hm_l LCTRL A  // CTRL on pinky fingers
-    #define _C_CTL &hm_r RCTRL ;
+    #define _C_CTL &hm_r RCTRL SEMICOLON
     #define _S_ALT &hm_l LALT S   // ALT/OPT on ring fingers
     #define _L_ALT &hm_r LALT L   
     #define _D_CMD &hm_l LCMD D   // CMD/WINDOWS on middle fingers
