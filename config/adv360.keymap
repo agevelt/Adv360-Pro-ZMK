@@ -37,7 +37,7 @@
 #define THUMBS THUMBS_LEFT THUMBS_RIGHT
 
 &lt {
-    quick-tap-ms = <300>;
+    quick-tap-ms = <175>;
     global-quick-tap;
 };
 
@@ -53,7 +53,6 @@
         quick_tap_ms = <175>;
         flavor = "balanced";
         bindings = <&kp>, <&kp>;
-        hold-trigger-key-positions = <KEYS_RIGHT THUMBS>;
     };
 
     hm_l: homerow_mods_left {
@@ -64,6 +63,8 @@
         quick_tap_ms = <175>;
         flavor = "balanced";
         bindings = <&kp>, <&kp>;
+        hold-trigger-key-positions = <KEYS_RIGHT THUMBS>;
+        hold-trigger-on-release;
     };
 
     hm_r: homerow_mods_right {
@@ -75,6 +76,7 @@
         flavor = "balanced";
         bindings = <&kp>, <&kp>;
         hold-trigger-key-positions = <KEYS_LEFT THUMBS>;
+        hold-trigger-on-release;
     };
   };
 
