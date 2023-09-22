@@ -1,1 +1,10 @@
-[]
+[
+	{
+		"code": "&kp LS(TAB)",
+		"name": "&kp LS(TAB)",
+		"params": [
+			"code"
+		],
+		"type": "UD"
+	}
+]
