@@ -17,6 +17,7 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/rgb.h>
 #include <dt-bindings/zmk/backlight.h>
+#define HOST_OS 1 // 1 is linux. This is used to specify how the dk_ae, dk_oe, dk_aa macros should be interpreted.
 #include "./zmk-nodefree-config/helper.h"
 #include "./zmk-nodefree-config/international_chars/danish.dtsi"
 
