@@ -176,14 +176,20 @@
   };
 
 // Home row mods 
-#define _A_CTL &hm_l LCTRL A  // CTRL on pinky fingers
-#define _C_CTL &hm_r RCTRL SEMICOLON
+#define _A_CMD &hm_l LCMD A  // CMD/WIN on pinky fingers
+#define _C_CMD &hm_r RCMD SEMICOLON
 #define _S_ALT &hm_l LALT S   // ALT/OPT on ring fingers
 #define _L_ALT &hm_r LALT L   
-#define _D_CMD &hm_l LCMD D   // CMD/WINDOWS on middle fingers
-#define _K_CMD &hm_r RCMD K 
+#define _D_CTL &hm_l LCTL D   // CTL on middle fingers
+#define _K_CTL &hm_r RCTL K
 #define _F_SFT &hm_l LSHFT F  // SHIFT on index fingers
 #define _J_SFT &hm_r RSHFT J
+
+// Mac version on layer 5 swaps CTRL and CMD (to pinky and middle finger respectively), toggle layer with macro key 4
+#define _A_CTL &hm_l LCTL A  // CTL on pinky fingers
+#define _C_CTL &hm_r LCTL SEMICOLON
+#define _D_CMD &hm_l LCMD D   // CMD on middle fingers
+#define _K_CMD &hm_r RCMD K
 
 
     keymap {
@@ -194,7 +200,7 @@
             bindings = <
  &kp EQUAL       &kp N1          &kp N2      &kp N3     &kp N4  &kp N5                 &tog 1                                                                              &mo 3  &kp N6    &kp N7      &kp N8      &kp N9       &kp N0  &kp MINUS
    &kp TAB        &kp Q           &kp W       &kp E      &kp R   &kp T            &kp LS(TAB)                                                                              &none   &kp Y     &kp U       &kp I       &kp O        &kp P   &kp BSLH
-   &kp ESC       _A_CTL          _S_ALT      _D_CMD     _F_SFT   &kp G                &kp TAB     &kp LCTRL      &kp HOME                  &kp PG_UP        &kp RCTRL      &tog 5  &kp H    _J_SFT      _K_CMD      _L_ALT       _C_CTL    &kp SQT
+   &kp ESC       _A_CMD          _S_ALT      _D_CTL     _F_SFT   &kp G                &kp TAB     &kp LCTRL      &kp HOME                  &kp PG_UP        &kp RCTRL      &tog 5  &kp H    _J_SFT      _K_CTL      _L_ALT       _C_CMD    &kp SQT
  &kp LSHFT        &kp Z           &kp X       &kp C      &kp V   &kp B                                            &kp END                  &kp PG_DN                               &kp N     &kp M   &kp COMMA     &kp DOT     &kp FSLH  &kp RSHFT
      &mo 2    &kp GRAVE        &kp CAPS    &kp LEFT  &kp RIGHT                      &kp LCTRL  &kp LEFT_ALT  &kp LEFT_WIN                  &kp ENTER  &lt 4 BACKSPACE  &kp SPACE          &kp DOWN      &kp UP    &kp LBKT     &kp RBKT      &mo 2
             >;
@@ -244,7 +250,7 @@
             bindings = <
  &trans  &trans  &trans  &trans  &trans  &trans            &trans                                                   &trans &trans  &trans  &trans  &trans    &trans   &trans
  &trans  &trans  &trans  &trans  &trans  &trans             &none                                                   &none  &trans  &trans  &trans   &trans   &trans   &trans
- &trans  &trans  &trans  &trans  &trans  &trans             &none  &trans  &trans                  &trans  &trans   &tog 5 &trans  &trans  &trans   &trans   &trans   &trans
+ &trans  _A_CTL  _S_ALT  _D_CMD  _F_SFT  &trans             &none  &trans  &trans                  &trans  &trans   &tog 5 &trans  _J_SFT  _K_CMD   _L_ALT   _C_CTL   &trans
  &trans  &trans  &trans  &trans  &trans  &trans                            &trans                  &trans                  &trans  &trans  &trans   &trans   &trans   &trans
  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans                  &trans  &trans  &trans          &trans  &trans   &trans   &trans   &trans
             >;
