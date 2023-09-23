@@ -67,27 +67,65 @@
         combo_undo {
             timeout-ms = <50>;
             key-positions = <47 48>; // Z+X
-            bindings = <&kp C_AC_UNDO>;
+            bindings = <&kp LC(Z)>;
+            layers = <0>;
         };
         combo_cut {
             timeout-ms = <50>;
             key-positions = <47 49>; // Z+C
-            bindings = <&kp C_AC_CUT>;
+            bindings = <&kp LC(X)>;
+            layers = <0>;
         }; 
         combo_copy {
             timeout-ms = <50>;
             key-positions = <48 49>; // X+C
-            bindings = <&kp C_AC_COPY>;
+            bindings = <&kp LC(C)>;
+            layers = <0>;
         };        
         combo_paste {
             timeout-ms = <50>;
             key-positions = <49 50>; // C+V
-            bindings = <&kp C_AC_PASTE>;
+            bindings = <&kp LC(V)>;
+            layers = <0>;
         };
         combo_redo {
             timeout-ms = <50>;
             key-positions = <47 50>; // Z+V
-            bindings = <&kp C_AC_REDO>;
+            bindings = <&kp LC(LS(Z))>;
+            layers = <0>;
+        };
+
+
+        // MAC version, enabled by toggling layer 5
+        combo_mac_undo {
+            timeout-ms = <50>;
+            key-positions = <47 48>; // Z+X
+            bindings = <&kp LCMD(Z)>;
+            layers = <5>;
+        };
+        combo_mac_cut {
+            timeout-ms = <50>;
+            key-positions = <47 49>; // Z+C
+            bindings = <&kp LCMD(X)>;
+            layers = <5>;
+        };
+        combo_mac_copy {
+            timeout-ms = <50>;
+            key-positions = <48 49>; // X+C
+            bindings = <&kp LCMD(C)>;
+            layers = <5>;
+        };
+        combo_mac_paste {
+            timeout-ms = <50>;
+            key-positions = <49 50>; // C+V
+            bindings = <&kp LCMD(V)>;
+            layers = <5>;
+        };
+        combo_mac_redo {
+            timeout-ms = <50>;
+            key-positions = <47 50>; // Z+V
+            bindings = <&kp LCMD(LS(Z))>;
+            layers = <5>;
         };
     };
 };
@@ -155,7 +193,7 @@
             bindings = <
  &kp EQUAL       &kp N1          &kp N2      &kp N3     &kp N4  &kp N5                 &tog 1                                                                              &mo 3  &kp N6    &kp N7      &kp N8      &kp N9       &kp N0  &kp MINUS
    &kp TAB        &kp Q           &kp W       &kp E      &kp R   &kp T            &kp LS(TAB)                                                                              &none   &kp Y     &kp U       &kp I       &kp O        &kp P   &kp BSLH
-   &kp ESC       _A_CTL          _S_ALT      _D_CMD     _F_SFT   &kp G                &kp TAB     &kp LCTRL      &kp HOME                  &kp PG_UP        &kp RCTRL      &none   &kp H    _J_SFT      _K_CMD      _L_ALT       _C_CTL    &kp SQT
+   &kp ESC       _A_CTL          _S_ALT      _D_CMD     _F_SFT   &kp G                &kp TAB     &kp LCTRL      &kp HOME                  &kp PG_UP        &kp RCTRL      &tog 5  &kp H    _J_SFT      _K_CMD      _L_ALT       _C_CTL    &kp SQT
  &kp LSHFT        &kp Z           &kp X       &kp C      &kp V   &kp B                                            &kp END                  &kp PG_DN                               &kp N     &kp M   &kp COMMA     &kp DOT     &kp FSLH  &kp RSHFT
      &mo 2    &kp GRAVE        &kp CAPS    &kp LEFT  &kp RIGHT                      &kp LCTRL  &kp LEFT_ALT  &kp LEFT_WIN                  &kp ENTER  &lt 4 BACKSPACE  &kp SPACE          &kp DOWN      &kp UP    &kp LBKT     &kp RBKT      &mo 2
             >;
@@ -201,5 +239,14 @@
             >;
         };
 
+        layer_Layer__5 {
+            bindings = <
+ &trans  &trans  &trans  &trans  &trans  &trans            &trans                                                   &trans &trans  &trans  &trans  &trans    &trans   &trans
+ &trans  &trans  &trans  &trans  &trans  &trans             &none                                                   &none  &trans  &trans  &trans   &trans   &trans   &trans
+ &trans  &trans  &trans  &trans  &trans  &trans             &none  &trans  &trans                  &trans  &trans   &tog 5 &trans  &trans  &trans   &trans   &trans   &trans
+ &trans  &trans  &trans  &trans  &trans  &trans                            &trans                  &trans                  &trans  &trans  &trans   &trans   &trans   &trans
+ &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans                  &trans  &trans  &trans          &trans  &trans   &trans   &trans   &trans
+            >;
+        };
     };
 };
