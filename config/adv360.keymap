@@ -52,13 +52,6 @@
 
 #define THUMBS THUMBS_LEFT THUMBS_RIGHT
 
-&lt {
-    quick-tap-ms = <150>;
-    global-quick-tap;
-};
-
-
-
 / {
     combos {
         compatible = "zmk,combos";
@@ -69,7 +62,7 @@
             key-positions = <43 44>;
             bindings = <&kp K_UNDO>;
         };
-        combo_copy {
+        combo_cut {
             timeout-ms = <50>;
             key-positions = <43 45>;
             bindings = <&kp K_CUT>;
@@ -86,7 +79,6 @@
         };   
     };
 };
-
 
 
 / {
@@ -132,15 +124,15 @@
     };
   };
 
-    // Home row mods 
-    #define _A_CTL &hm_l LCTRL A  // CTRL on pinky fingers
-    #define _C_CTL &hm_r RCTRL SEMICOLON
-    #define _S_ALT &hm_l LALT S   // ALT/OPT on ring fingers
-    #define _L_ALT &hm_r LALT L   
-    #define _D_CMD &hm_l LCMD D   // CMD/WINDOWS on middle fingers
-    #define _K_CMD &hm_r RCMD K 
-    #define _F_SFT &hm_l LSHFT F  // SHIFT on index fingers
-    #define _J_SFT &hm_r RSHFT J
+// Home row mods 
+#define _A_CTL &hm_l LCTRL A  // CTRL on pinky fingers
+#define _C_CTL &hm_r RCTRL SEMICOLON
+#define _S_ALT &hm_l LALT S   // ALT/OPT on ring fingers
+#define _L_ALT &hm_r LALT L   
+#define _D_CMD &hm_l LCMD D   // CMD/WINDOWS on middle fingers
+#define _K_CMD &hm_r RCMD K 
+#define _F_SFT &hm_l LSHFT F  // SHIFT on index fingers
+#define _J_SFT &hm_r RSHFT J
 
 
     keymap {
