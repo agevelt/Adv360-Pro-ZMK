@@ -37,7 +37,7 @@
 #define THUMBS THUMBS_LEFT THUMBS_RIGHT
 
 &lt {
-    quick-tap-ms = <125>;
+    quick-tap-ms = <150>;
     global-quick-tap;
 };
 
@@ -49,8 +49,8 @@
         compatible = "zmk,behavior-hold-tap";
         label = "HOMEROW_MODS";
         #binding-cells = <2>;
-        tapping-term-ms = <175>;
-        quick_tap_ms = <125>;
+        tapping-term-ms = <250>;
+        quick_tap_ms = <150>;
         flavor = "balanced";
         bindings = <&kp>, <&kp>;
     };
@@ -59,8 +59,8 @@
         compatible = "zmk,behavior-hold-tap";
         label = "HOMEROW_MODS_LEFT";
         #binding-cells = <2>;
-        tapping-term-ms = <175>;
-        quick_tap_ms = <125>;
+        tapping-term-ms = <250>;
+        quick_tap_ms = <150>;
         flavor = "balanced";
         bindings = <&kp>, <&kp>;
         hold-trigger-key-positions = <KEYS_RIGHT THUMBS>;
@@ -73,8 +73,8 @@
         compatible = "zmk,behavior-hold-tap";
         label = "HOMEROW_MODS_RIGHT";
         #binding-cells = <2>;
-        tapping-term-ms = <175>;
-        quick_tap_ms = <125>;
+        tapping-term-ms = <250>;
+        quick_tap_ms = <150>;
         flavor = "balanced";
         bindings = <&kp>, <&kp>;
         hold-trigger-key-positions = <KEYS_LEFT THUMBS>;
